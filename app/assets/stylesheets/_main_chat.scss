@@ -34,12 +34,13 @@
     }
   }
 
-  .messsages {
+  .messages {
     height: calc(100vh - 190px);
     box-sizing: border-box;
     padding: 46px 40px 0;
-    background-color: #fafafa;  
-    .messsage {
+    background-color: #fafafa;
+    overflow: scroll;  
+    .message {
       &__upper-info {
         display: flex;
         &__talker {
