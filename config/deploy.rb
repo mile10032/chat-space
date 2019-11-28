@@ -11,7 +11,7 @@ set :repo_url,  'git@github.com:mile10032/chat-space.git'
 # バージョンが変わっても共通で参照するディレクトリを指定
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
-set :linked_file, %w{ config/secrets.yml }
+set :linked_files, %w{ config/secrets.yml }
 
 
 set :rbenv_type, :user
@@ -34,6 +34,7 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
+
   desc 'upload secrets.yml'
   task :upload do
     on roles(:app) do |host|
@@ -46,6 +47,7 @@ namespace :deploy do
   before :starting, 'deploy:upload'
   after :finishing, 'deploy:cleanup'
 end
+
 set :default_env, {
   rbenv_root: "/usr/local/rbenv",
   path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH",
