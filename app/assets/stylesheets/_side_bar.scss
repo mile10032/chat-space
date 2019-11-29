@@ -4,12 +4,14 @@
   color: #ffffff;
 
   .side-header {
+    color: #ffffff;
     padding: 0 20px;
     background-color: #253141;
     height: 100px;
-  line-height: 100px;
+    line-height: 100px;
 
     &__box {
+      color: #ffffff;
       display: flex;
       justify-content: space-between;
       width: 100%;
@@ -18,11 +20,14 @@
         font-size: 16px;
       }
       &__menu  {
+        color: #ffffff;
       display: flex;
         &__new-group {
+          color: #ffffff;
           margin-left: 0.3rem;
         }
         &__edit-user {
+          color: #ffffff;
           margin-left: 0.3rem;
         }
       }
@@ -31,16 +36,20 @@
 }
 
 .groups {
+  color: #ffffff;
   background-color: #2f3e51;
   height: calc(100vh - 100px);
   padding: 0 20px;
   .group {
+    color: #ffffff;
     box-sizing: border-box;
     padding: 20px 0 40px;
     &__name {
+      color: #ffffff;
       font-size: 15px;
     }
     &__message {
+      color: #ffffff;
       font-size: 11px;
       margin-top: 5px;
     }
